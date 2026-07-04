@@ -18,6 +18,35 @@ variáveis administrativas territorialmente dependentes (ADM).
 
 ---
 
+## Pipeline
+
+```mermaid
+flowchart TD
+    A["📂 CadÚnico 2024–2025\n(cadunico_2023_2025_union_anon.csv)"]
+    B["🔧 Pré-processamento\n(limpeza, feature engineering,\nsplit temporal 2024→2025)"]
+    E1["E1 — Baseline LightGBM\n(holdout temporal)\nAUC-ROC = 0,91"]
+    E2["E2 — Validação Espacial\n(GroupKFold por município)\nAUC-ROC = 0,56"]
+    E3["E3 — Ablação TER vs ADM\n(A0 full → A1 −TER → A2 −TER−ADM)"]
+    E7["E7/E8 — SHAP\n(importância por categoria\nTER / ADM / SOC / TEMP)"]
+    E11["E11 — Modelo Multinível\n(ICC municipal = 0,178)"]
+    E12["E12 — Schema Audit\n(estabilidade temporal\nde coeficientes)"]
+    OUT["📊 Outputs\n(métricas, mapas municipais,\ngráficos SHAP)"]
+
+    A --> B
+    B --> E1
+    B --> E2
+    B --> E12
+    E1 --> E3
+    E1 --> E7
+    E2 --> E11
+    E3 --> OUT
+    E7 --> OUT
+    E11 --> OUT
+    E12 --> OUT
+```
+
+---
+
 ## Reprodução
 
 ### 1. Instalar dependências
@@ -32,10 +61,23 @@ pip install -r requirements.txt
 ### 2. Obter os dados
 
 Os microdados anonimizados do CadÚnico não são distribuídos diretamente neste
-repositório por restrições de privacidade (LGPD). Para acesso, consulte o repositório
-da coorientadora ou entre em contato com os autores.
+repositório por restrições de privacidade (LGPD).
 
-Coloque o arquivo `cadunico_2023_2025_union_anon.csv` em `data/anon_outputs/`.
+Os dados podem ser acessados em:
+
+```
+https://drive.google.com/drive/folders/1sQwPOXon2Nz4FvgBTbP_4aMwpdO9JPZj?usp=sharing
+```
+
+Após o download, coloque o arquivo `cadunico_2023_2025_union_anon.csv` em
+`data/anon_outputs/`. A estrutura esperada:
+
+```
+data/
+    anon_outputs/
+        cadunico_2023_2025_union_anon.csv
+    BR_Municipios_2024/
+```
 
 ### 3. Executar o pipeline
 
@@ -49,13 +91,18 @@ completo a partir do CSV.
 
 ## Estrutura do repositório
 
-| Arquivo/Pasta | Descrição |
-|---|---|
-| `04_pipeline_completo_final.ipynb` | Pipeline completo auto-suficiente (Experimentos E1–E12) |
-| `scripts/common_pipeline.py` | Módulo auxiliar compartilhado (pré-processamento, treino, métricas) |
-| `requirements.txt` | Dependências Python com versões fixadas |
-| `data/BR_Municipios_2024/` | Shapefile IBGE de municípios brasileiros (dado público) |
-| `data/anon_outputs/mapeamento_variaveis_inicial.csv` | Classificação TER/ADM/SOC/TEMP/OTHER das variáveis |
+```
+ppiadaearg/
+│
+├── 04_pipeline_completo_final.ipynb   Pipeline completo (Experimentos E1–E12)
+├── requirements.txt                   Dependências Python com versões fixadas
+├── scripts/
+│   └── common_pipeline.py             Módulo auxiliar (pré-processamento, treino, métricas)
+└── data/
+    ├── BR_Municipios_2024/            Shapefile IBGE de municípios brasileiros
+    └── anon_outputs/
+        └── mapeamento_variaveis_inicial.csv   Classificação TER/ADM/SOC/TEMP/OTHER
+```
 
 ---
 
