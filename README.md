@@ -22,27 +22,38 @@ variáveis administrativas territorialmente dependentes (ADM).
 
 ```mermaid
 flowchart TD
-    A["📂 CadÚnico 2024–2025\n(cadunico_2023_2025_union_anon.csv)"]
-    B["🔧 Pré-processamento\n(limpeza, feature engineering,\nsplit temporal 2024→2025)"]
-    E1["E1 — Baseline LightGBM\n(holdout temporal)\nAUC-ROC = 0,91"]
-    E2["E2 — Validação Espacial\n(GroupKFold por município)\nAUC-ROC = 0,56"]
-    E3["E3 — Ablação TER vs ADM\n(A0 full → A1 −TER → A2 −TER−ADM)"]
-    E7["E7/E8 — SHAP\n(importância por categoria\nTER / ADM / SOC / TEMP)"]
-    E11["E11 — Modelo Multinível\n(ICC municipal = 0,178)"]
-    E12["E12 — Schema Audit\n(estabilidade temporal\nde coeficientes)"]
-    OUT["📊 Outputs\n(métricas, mapas municipais,\ngráficos SHAP)"]
+    A["📂 CadÚnico 2023–2025"] --> B["🔧 Pré-processamento\n(limpeza · feature engineering\nsplit temporal 2024 → 2025)"]
 
-    A --> B
-    B --> E1
-    B --> E2
-    B --> E12
-    E1 --> E3
-    E1 --> E7
+    B --> E1 & E2 & E9 & E12
+
+    subgraph REPROD["Reprodução e diagnóstico do modelo"]
+        E1["E1 — Baseline LightGBM\n(holdout temporal)\nAUC-ROC = 0,91"]
+        E6["E6 — Comparação de modelos\n(LGBM weighted/unweighted · CatBoost)"]
+        E4["E4 — Calibração\n(Brier · curva 10 bins · isotônica)"]
+        E5["E5 — Erro municipal\n+ Moran do erro"]
+        E13["E13 — Atributos socioecon.\nderivados (Cardozo 2020)"]
+    end
+
+    subgraph VAL["Validação de generalização"]
+        E2["E2 — Validação espacial\n(GroupKFold por município)\nAUC-ROC = 0,56"]
+        E11["E11 — Validação espaço-temporal\n(espacial + temporal combinados)\nAUC-ROC = 0,55"]
+    end
+
+    subgraph ESP["Análise espacial do alvo"]
+        E9["E9 — Moran's I global + LISA\npor ciclo (2024 e 2025)"]
+        E10["E10 — Transições LISA\n(persistência · emergência · desaparecimento)"]
+    end
+
+    subgraph CONTRIB["Contribuições metodológicas do autor"]
+        E3["E3 — Ablação TER vs ADM\n(A0 completo · A1 −TER · A2 −TER−ADM)"]
+        E7["E7/E8 — SHAP por categoria\n(TER · ADM · SOC · TEMP · OTHER)"]
+        E14["E14 — Year-independent\n(estabilidade temporal dos coeficientes)"]
+        E12["E12 — Schema audit\n(evolução de esquema 2023→2024→2025)"]
+    end
+
+    E1 --> E3 & E4 & E5 & E6 & E7 & E13 & E14
     E2 --> E11
-    E3 --> OUT
-    E7 --> OUT
-    E11 --> OUT
-    E12 --> OUT
+    E9 --> E10
 ```
 
 ---
