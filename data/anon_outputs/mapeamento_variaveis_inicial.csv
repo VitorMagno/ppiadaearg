@@ -1,0 +1,173 @@
+coluna,grupo,tratamento_co_orientadora,justificativa,nota_ambiguidade,Descricao,n_anos,anos_str,tipos_str,pct_na_max,pct_na_min,n_unicos_max,tem_no_dicionario
+d.cod_centro_assist_fam,ADM,removida na ablacao territorial dela,administrativa territorialmente-dependente (match: centro_assist),,Codigo do CRAS/CREAS,3,2023|2024|2025,float64,79.39,75.15,340,True
+d.cod_comunidade_quilombola_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: comunidade_quilombola),,Codigo da comunidade quilombola,3,2023|2024|2025,float64,98.88,98.66,91,True
+d.cod_cta_energ_unid_consum_fam,ADM,mantida como feature,administrativa territorialmente-dependente (match: cta_energ_unid_consum),ADM: alta cardinalidade (>300k unicos) - provavelmente excluir por cardinalidade alem da territorialidade,Codigo da unidade consumidora associado a conta de energia eletrica do domicilio.,3,2023|2024|2025,object,52.35,49.8,332734,True
+d.cod_eas_fam,ADM,removida na ablacao territorial dela,administrativa territorialmente-dependente (match: cod_eas_),,Codigo do estabelecimento EAS/MS,3,2023|2024|2025,float64,48.61,47.52,1130,True
+d.cod_familia_indigena_fam,ADM,mantida como feature,administrativa territorialmente-dependente (match: cod_familia_indigena),,Familia Indigena,3,2023|2024|2025,int64,0.0,0.0,2,True
+d.cod_indigena_reside_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: cod_indigena_reside),,Reside em reserva indigena,3,2023|2024|2025,float64,99.39,99.33,2,True
+d.cod_povo_indigena_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: povo_indigena),,Codigo de povo indigena,3,2023|2024|2025,float64,99.39,99.33,40,True
+d.cod_reserva_indigena_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: reserva_indigena),,Codigo da reserva indigena,3,2023|2024|2025,float64,99.66,99.63,9,True
+d.ind_familia_quilombola_fam,ADM,mantida como feature,administrativa territorialmente-dependente (match: ind_familia_quilombola),,Familia quilombola  ,3,2023|2024|2025,int64,0.0,0.0,2,True
+d.nom_centro_assist_fam,ADM,drop_high_card_text (removida sempre),administrativa territorialmente-dependente (match: centro_assist),,Nome do CRAS/CREAS,3,2023|2024|2025,str,79.39,75.15,176,True
+d.nom_comunidade_quilombola_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: comunidade_quilombola),,Nome da comunidade quilombola,3,2023|2024|2025,str,98.88,98.66,89,True
+d.nom_estab_assist_saude_fam,ADM,drop_high_card_text (removida sempre),administrativa territorialmente-dependente (match: estab_assist_saude),,Nome do estabelecimento EAS/MS,3,2023|2024|2025,str,48.61,47.52,1130,True
+d.nom_povo_indigena_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: povo_indigena),,Nome do povo indigena,3,2023|2024|2025,str,99.39,99.33,41,True
+d.nom_reserva_indigena_fam,ADM,missing>=95.0% (removida automaticamente),administrativa territorialmente-dependente (match: reserva_indigena),,Nome da reserva indigena,3,2023|2024|2025,str,99.66,99.63,16,True
+d.dat_atual_fam,ID,mantida como feature,identificador (match: dat_atual_fam),,Data da ultima atualizacao da familia,3,2023|2024|2025,str,0.0,0.0,2009,True
+d.dat_cadastramento_fam,ID,mantida como feature,identificador (match: dat_cadastramento),,Data de cadastramento da familia,3,2023|2024|2025,str,0.0,0.0,5688,True
+d.dta_entrevista_fam,ID,mantida como feature,identificador (match: dta_entrevista),,Data da entrevista,3,2023|2024|2025,str,0.01,0.0,2577,True
+p.cod_censo_inep_memb,ID,mantida como feature,identificador (match: cod_censo_inep),,Codigo INEP da escola da pessoa,3,2023|2024|2025,float64,70.36,68.39,7556,True
+p.cod_complemento_pessoa,ID,missing>=95.0% (removida automaticamente),identificador (match: cod_complemento_pessoa),,Complemento do numero do RG,3,2023|2024|2025,str,98.13,97.57,835,True
+p.dta_nasc_pessoa,ID,mantida como feature,identificador (match: dta_nasc),,Data de nascimento,3,2023|2024|2025,str,0.0,0.0,34559,True
+p.nom_escola_memb,ID,drop_high_card_text (removida sempre),identificador (match: nom_escola_memb),,Nome da escola da pessoa,3,2023|2024|2025,str,68.23,66.9,16842,True
+ano,META,mantida como feature,metadado administrativo (match: \bano\b),,,3,2023|2024|2025,int64,0.0,0.0,1,False
+d.cod_est_cadastral_fam,META,mantida como feature,metadado administrativo (match: cod_est_cadastral),,Estado cadastral da familia,3,2023|2024|2025,int64,0.0,0.0,2,True
+d.cod_forma_coleta_fam,META,mantida como feature,metadado administrativo (match: cod_forma_coleta),,Forma de coleta,3,2023|2024|2025,int64,0.0,0.0,3,True
+d.qtde_meses_desat_cat,META,mantida como feature,metadado administrativo (match: qtde_meses_desat_cat),,Numero de meses apos a ultima atualizacao cadastral,3,2023|2024|2025,int64,0.0,0.0,6,True
+p.cod_est_cadastral_memb,META,mantida como feature,metadado administrativo (match: cod_est_cadastral),,Estado cadastral da pessoa,3,2023|2024|2025,int64,0.0,0.0,3,True
+beneficio_social_harmonizado,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,,3,2023|2024|2025,int64|object,100.0,0.0,2,False
+d.cod_abaste_agua_domic_fam,SOC,mantida como feature,default socioeconomica,,Forma de abastecimento de agua,3,2023|2024|2025,float64,5.61,5.33,4,True
+d.cod_agua_canalizada_fam,SOC,mantida como feature,default socioeconomica,,Agua canalizada no domicilio,3,2023|2024|2025,float64,5.61,5.33,2,True
+d.cod_banheiro_domic_fam,SOC,mantida como feature,default socioeconomica,,Existencia de banheiro,3,2023|2024|2025,float64,5.61,5.33,2,True
+d.cod_calcamento_domic_fam,SOC,mantida como feature,default socioeconomica,,Calcamento em frente ao seu domicilio,3,2023|2024|2025,float64,5.61,5.33,3,True
+d.cod_destino_lixo_domic_fam,SOC,mantida como feature,default socioeconomica,,Forma de coleta do lixo,3,2023|2024|2025,float64,5.61,5.33,6,True
+d.cod_escoa_sanitario_domic_fam,SOC,mantida como feature,default socioeconomica,,Forma de escoamento sanitario,3,2023|2024|2025,float64,10.45,9.7,6,True
+d.cod_especie_domic_fam,SOC,mantida como feature,default socioeconomica,,Especie do domicilio,3,2023|2024|2025,float64,0.14,0.08,3,True
+d.cod_iluminacao_domic_fam,SOC,mantida como feature,default socioeconomica,,Tipo de iluminacao,3,2023|2024|2025,float64,5.61,5.33,6,True
+d.cod_material_domic_fam,SOC,mantida como feature,default socioeconomica,,Material predominante nas paredes externas do domicilio,3,2023|2024|2025,float64,5.61,5.33,8,True
+d.cod_material_piso_fam,SOC,mantida como feature,default socioeconomica,,Material predominante no piso do domicilio,3,2023|2024|2025,float64,5.61,5.33,7,True
+d.fx_rfpc,SOC,mantida como feature,default socioeconomica,,Faixa da renda familiar per capita,3,2023|2024|2025,int64,0.0,0.0,4,True
+d.ind_parc_mds_fam,SOC,mantida como feature,default socioeconomica,,Grupos Populacionais Tradicionais e Especificos,3,2023|2024|2025,float64,0.02,0.01,14,True
+d.ind_risco_scl_vlco_drts,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,,2,2024|2025,float64,99.89,99.86,2,False
+d.marc_pbf,SOC,mantida como feature,default socioeconomica,,Familia beneficiaria do Programa Bolsa Familia,3,2023|2024|2025,int64,0.0,0.0,2,True
+d.qtd_comodos_domic_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de comodos do domicilio,3,2023|2024|2025,float64,5.61,5.33,66,True
+d.qtd_comodos_dormitorio_fam,SOC,mantida como feature,default socioeconomica,,Comodo servindo como dormitorio do domicilio,3,2023|2024|2025,float64,5.61,5.33,35,True
+d.qtd_familias_domic_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de familias no domicilio,3,2023|2024|2025,float64,0.39,0.38,40,True
+d.qtd_pessoa_inter_0_17_anos_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de pessoas internadas faixa 0-17 anos,3,2023|2024|2025,float64,15.81,1.52,19,True
+d.qtd_pessoa_inter_18_64_anos_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de pessoas internadas faixa 18-59 anos,3,2023|2024|2025,float64,15.81,1.52,21,True
+d.qtd_pessoa_inter_65_anos_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de pessoas internadas faixa 60 anos ou mais,3,2023|2024|2025,float64,15.84,1.52,23,True
+d.qtd_pessoas_domic_fam,SOC,mantida como feature,default socioeconomica,,Quantidade de pessoas no domicilio,3,2023|2024|2025,float64,0.39,0.38,60,True
+d.val_desp_agua_esgoto_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com agua,3,2023|2024|2025,float64|int64,7.48,0.0,640,True
+d.val_desp_alimentacao_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com alimentacao,3,2023|2024|2025,float64|int64,0.66,0.0,1810,True
+d.val_desp_aluguel_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com aluguel,3,2023|2024|2025,float64,12.22,0.0,566,True
+d.val_desp_energia_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com energia,3,2023|2024|2025,float64|int64,1.94,0.0,1067,True
+d.val_desp_gas_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com gas,3,2023|2024|2025,float64|int64,1.23,0.0,371,True
+d.val_desp_medicamentos_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com medicamentos,3,2023|2024|2025,float64,13.0,0.0,665,True
+d.val_desp_transpor_fam,SOC,mantida como feature,default socioeconomica,,Valor de despesas com transporte,3,2023|2024|2025,float64,13.94,0.0,331,True
+d.vlr_renda_media_fam,SOC,mantida como feature,default socioeconomica,,Valor da renda familiar per capita,3,2023|2024|2025,int64,0.0,0.0,6010,True
+d.vlr_renda_total_fam,SOC,mantida como feature,default socioeconomica,,Valor da renda total da familia,3,2023|2024|2025,float64,0.0,0.0,8838,True
+fx_renda_individual_805,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_808,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_809_1,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_809_2,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_809_3,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_809_4,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+fx_renda_individual_809_5,SOC,mantida como feature,default socioeconomica,,,2,2023|2024,int64,0.0,0.0,8,False
+p.cod_afastado_trab_memb,SOC,mantida como feature,default socioeconomica,,Pessoa estava afastada na semana passada?,3,2023|2024|2025,float64,54.07,53.74,2,True
+p.cod_agricultura_trab_memb,SOC,mantida como feature,default socioeconomica,,Atividade extrativista,3,2023|2024|2025,float64,75.54,74.36,2,True
+p.cod_ano_serie_frequenta_memb,SOC,mantida como feature,default socioeconomica,,Ano e serie do curso que a pessoa frequenta,3,2023|2024|2025,float64,74.36,73.52,10,True
+p.cod_ano_serie_frequentou_memb,SOC,mantida como feature,default socioeconomica,,Ultimo ano e serie do curso que a pessoa frequentou,3,2023|2024|2025,float64,52.22,51.32,10,True
+p.cod_cart_assinada_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Teve emprego com carteira assinada?,3,2023|2024|2025,float64,99.89,99.84,3,True
+p.cod_concluiu_frequentou_memb,SOC,mantida como feature,default socioeconomica,,A pessoa concluiu o curso?,3,2023|2024|2025,float64,52.22,51.32,2,True
+p.cod_contato_parente_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Tem contato com parente fora da condicao de rua ,3,2023|2024|2025,float64,99.89,99.84,6,True
+p.cod_curso_frequenta_memb,SOC,mantida como feature,default socioeconomica,,Curso que a pessoa frequenta,3,2023|2024|2025,float64,68.23,66.9,14,True
+p.cod_curso_frequentou_pessoa_memb,SOC,mantida como feature,default socioeconomica,,Curso mais elevado que a pessoa frequentou,3,2023|2024|2025,float64,49.96,48.71,15,True
+p.cod_deficiencia_memb,SOC,mantida como feature,default socioeconomica,,Pessoa tem deficiencia?,3,2023|2024|2025,float64|int64,0.0,0.0,2,True
+p.cod_parentesco_rf_pessoa,SOC,mantida como feature,default socioeconomica,,Relacao de parentesco com o responsavel familiar,3,2023|2024|2025,float64,0.24,0.21,11,True
+p.cod_principal_trab_memb,SOC,mantida como feature,default socioeconomica,,Funcao principal,3,2023|2024|2025,float64,75.54,74.36,11,True
+p.cod_raca_cor_pessoa,SOC,mantida como feature,default socioeconomica,,Cor ou raca,3,2023|2024|2025,float64,0.01,0.01,5,True
+p.cod_sabe_ler_escrever_memb,SOC,mantida como feature,default socioeconomica,,Pessoa sabe ler e escrever,3,2023|2024|2025,float64,0.0,0.0,2,True
+p.cod_sexo_pessoa,SOC,mantida como feature,default socioeconomica,,Sexo,3,2023|2024|2025,int64,0.0,0.0,2,True
+p.cod_tempo_cidade_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Tempo em que mora na cidade,3,2023|2024|2025,float64,99.89,99.84,6,True
+p.cod_tempo_rua_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Tempo em que vive na rua,3,2023|2024|2025,float64,99.89,99.84,6,True
+p.cod_trabalho_12_meses_memb,SOC,mantida como feature,default socioeconomica,,Trabalho remunerado nos ultimos 12 meses,3,2023|2024|2025,float64,30.93,30.05,2,True
+p.cod_trabalhou_memb,SOC,mantida como feature,default socioeconomica,,Pessoa trabalhou na semana passada?,3,2023|2024|2025,float64,30.93,30.05,2,True
+p.cod_vive_fam_rua_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Vive com sua familia na rua,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.fx_idade,SOC,mantida como feature,default socioeconomica,,Faixa etaria,3,2023|2024|2025,float64|int64,0.0,0.0,13,True
+p.fx_renda_individual_805,SOC,mantida como feature,default socioeconomica,,Faixa do valor de remuneracao do mes passado do trabalho principal.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_808,SOC,mantida como feature,default socioeconomica,,Faixa da remuneracao bruta de todos os trabalhos nos ultimos 12 meses.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_809_1,SOC,mantida como feature,default socioeconomica,,Faixa do valor recebido de doacao.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_809_2,SOC,mantida como feature,default socioeconomica,,Faixa do valor recebido de aposentadoria.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_809_3,SOC,mantida como feature,default socioeconomica,,Faixa do valor recebido de seguro desemprego.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_809_4,SOC,mantida como feature,default socioeconomica,,Faixa do valor recebido de pensao alimenticia.,1,2025,int64,0.0,0.0,8,True
+p.fx_renda_individual_809_5,SOC,mantida como feature,default socioeconomica,,Faixa do valor recebido de outras fontes.,1,2025,int64,0.0,0.0,8,True
+p.grau_instrucao,SOC,mantida como feature,default socioeconomica,,Grau de instrucao,3,2023|2024|2025,float64,9.33,9.1,6,True
+p.ind_ajuda_especializado_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Recebe ajuda de cuidador especializado,3,2023|2024|2025,float64,99.57,99.56,1,True
+p.ind_ajuda_familia_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Recebe ajuda de alguem da familia,3,2023|2024|2025,float64,95.77,95.43,1,True
+p.ind_ajuda_instituicao_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Recebe ajuda de instituicao,3,2023|2024|2025,float64,99.48,99.45,1,True
+p.ind_ajuda_nao_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao recebe ajuda de terceiros,3,2023|2024|2025,float64,96.87,96.54,1,True
+p.ind_ajuda_outra_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Recebe ajuda de outra forma,3,2023|2024|2025,float64,99.89,99.87,1,True
+p.ind_ajuda_vizinho_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Recebe ajuda de vizinho,3,2023|2024|2025,float64,99.92,99.91,1,True
+p.ind_atend_centro_ref_rua_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por centro ref pop rua,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_cras_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por cras ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_creas_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por creas ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_hospital_geral_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por hospital/clinica geral,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_inst_gov_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por instituicao governamental,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_inst_nao_gov_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atendido por instituicao nao-governamental ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_atend_nenhum_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao foi atendido por nenhum local,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_ativ_com_coop_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atividade comunitaria em cooperativa,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_ativ_com_escola_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atividade comunitaria em escola,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_ativ_com_mov_soc_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Atividade comunitaria em movimento social ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_ativ_com_nao_resp_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao respondeu se frequentou atividade comunitaria,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_ativ_com_nao_sabe_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao sabe se frequentou atividade comunitaria,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_def_baixa_visao_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Baixa visao,3,2023|2024|2025,float64,99.09,99.0,1,True
+p.ind_def_cegueira_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Cegueira,3,2023|2024|2025,float64,99.76,99.75,1,True
+p.ind_def_fisica_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Deficiencia fisica,3,2023|2024|2025,float64,96.13,95.89,1,True
+p.ind_def_mental_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Deficiencia mental ou intelectual,3,2023|2024|2025,float64,98.11,97.91,1,True
+p.ind_def_sindrome_down_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Sindrome de Down,3,2023|2024|2025,float64,99.92,99.91,1,True
+p.ind_def_surdez_leve_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Surdez leve/moderada,3,2023|2024|2025,float64,99.8,99.79,1,True
+p.ind_def_surdez_profunda_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Surdez severa/profunda,3,2023|2024|2025,float64,99.74,99.73,1,True
+p.ind_def_transtorno_mental_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Transtorno/doenca mental,3,2023|2024|2025,float64,98.7,98.49,1,True
+p.ind_dinh_carregador_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro como carregador,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_catador_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro como catador,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_const_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro com construcao civil ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_flanelhinha_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro como guardador de carro,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_nao_resp_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao respondeu como ganha dinheiro ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_outro_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro de outra forma ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_pede_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro como pedinte,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_servs_gerais_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro com servicos gerais ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dinh_vendas_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Ganha dinheiro com vendas,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_dormir_albergue_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Dorme em albergue ,3,2023|2024|2025,float64,99.89,99.85,2,True
+p.ind_dormir_dom_part_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Dorme em domicilio particular,3,2023|2024|2025,float64,99.89,99.85,2,True
+p.ind_dormir_rua_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Dorme na rua ,3,2023|2024|2025,float64,99.89,99.85,2,True
+p.ind_frequenta_escola_memb,SOC,mantida como feature,default socioeconomica,,Pessoa frequenta escola,3,2023|2024|2025,float64,0.0,0.0,4,True
+p.ind_identidade_genero,SOC,mantida como feature,default socioeconomica,,,2,2024|2025,float64,93.21,70.28,2,False
+p.ind_motivo_alcool_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por alcoolismo ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_ameaca_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por ameaca ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_desemprego_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por desemprego ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_nao_resp_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao respondeu o motivo da condicao de rua,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_nao_sabe_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Nao sabe/nao lembra o motivo da condicao de rua ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_outro_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por outro motivo,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_perda_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por perda de moradia ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_pref_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por preferencia ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_probs_fam_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por problemas familiares,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_saude_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por tratamento de saude ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_motivo_trabalho_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Motivo da condicao de rua por trabalho ,3,2023|2024|2025,float64,99.89,99.84,2,True
+p.ind_outro_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Dorme de outra forma,3,2023|2024|2025,float64,99.89,99.85,2,True
+p.ind_tipo_identidade_genero,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,,2,2024|2025,float64,99.38,94.14,3,False
+p.ind_trabalho_infantil_pessoa,SOC,mantida como feature,default socioeconomica,,Pessoa com marcacao de trabalho infantil,3,2023|2024|2025,int64,0.0,0.0,2,True
+p.ind_transgenero,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,,2,2024|2025,float64,99.38,94.14,3,False
+p.marc_pab,SOC,mantida como feature,default socioeconomica,,,1,2025,int64,0.0,0.0,1,False
+p.marc_pbf,SOC,mantida como feature,default socioeconomica,,Pessoa beneficiaria do Programa Bolsa Familia,2,2023|2024,int64,0.0,0.0,2,True
+p.marc_sit_rua,SOC,mantida como feature,default socioeconomica,,Situacao de Rua,3,2023|2024|2025,int64,0.0,0.0,2,True
+p.qtd_dormir_freq_albergue_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Quantidade de vezes por semana que dorme em albergue ,3,2023|2024|2025,float64,99.97,99.96,7,True
+p.qtd_dormir_freq_dom_part_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Quantidade de vezes por semana que dorme em domicilio particular,3,2023|2024|2025,float64,99.99,99.99,7,True
+p.qtd_dormir_freq_rua_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Quantidade de vezes por semana que dorme na rua ,3,2023|2024|2025,float64,99.94,99.9,7,True
+p.qtd_freq_outro_memb,SOC,missing>=95.0% (removida automaticamente),default socioeconomica,,Quantidade de vezes por semana que dorme de outra forma,3,2023|2024|2025,float64,99.99,99.98,7,True
+p.qtd_meses_12_meses_memb,SOC,mantida como feature,default socioeconomica,,Quantidade de meses trabalhados nos ultimos 12 meses,3,2023|2024|2025,float64,75.35,73.96,16,True
+d.cd_ibge,TER,removida na ablacao territorial dela,territorial direta (match: \bcd_ibge\b),,,3,2023|2024|2025,int64,0.0,0.0,102,False
+d.cod_local_domic_fam,TER,mantida como feature,territorial direta (match: cod_local_domic),"TER vs SOC: urbano/rural - territorial, mas tradicionalmente tratado como socioeconomico em estudos de IA",Situacao do domicilio,3,2023|2024|2025,float64,0.14,0.08,2,True
+p.cod_escola_local_memb,TER,mantida como feature,territorial direta (match: cod_escola_local),"TER vs SOC: escola no municipio (sim/nao) - territorial, mas pode ser SOC",Escola localizada no municipio,3,2023|2024|2025,float64,68.24,66.92,2,True
+p.cod_ibge_munic_certid_pessoa,TER,removida na ablacao territorial dela,territorial direta (match: munic_certid),,Codigo IBGE do municipio do registro,3,2023|2024|2025,float64,25.82,21.4,3210,True
+p.cod_ibge_munic_escola_memb,TER,removida na ablacao territorial dela,territorial direta (match: munic_escola),,Codigo do ibge do municipio da escola da pessoa,3,2023|2024|2025,float64,68.24,66.92,1177,True
+p.cod_ibge_munic_nasc_pessoa,TER,removida na ablacao territorial dela,territorial direta (match: munic_nasc),,Codigo ibge do municipio de nascimento da pessoa,3,2023|2024|2025,float64,0.04,0.04,3526,True
+p.cod_local_nascimento_pessoa,TER,mantida como feature,territorial direta (match: local_nascimento),,Local de nascimento,3,2023|2024|2025,float64,0.0,0.0,3,True
+p.cod_pais_origem_pessoa,TER,mantida como feature,territorial direta (match: cod_pais_origem),"TER vs SOC: pais de origem - territorial, mas tambem proxy de migracao","Codigo do pais de nascimento da pessoa, no formato nn",3,2023|2024|2025,float64|int64,0.0,0.0,58,True
+p.nom_ibge_munic_nasc_pessoa,TER,drop_high_card_text (removida sempre),territorial direta (match: munic_nasc),,Nome do municipio de nascimento da pessoa,3,2023|2024|2025,str,0.04,0.04,3381,True
+p.nom_munic_certid_pessoa,TER,drop_high_card_text (removida sempre),territorial direta (match: munic_certid),,Municipio do registro,3,2023|2024|2025,str,25.82,22.02,3081,True
+p.nom_munic_escola_memb,TER,drop_high_card_text (removida sempre),territorial direta (match: munic_escola),,Nome do municipio da escola da pessoa,3,2023|2024|2025,str,68.24,66.92,1158,True
+p.nom_pais_origem_pessoa,TER,missing>=95.0% (removida automaticamente),territorial direta (match: nom_pais_origem),"TER vs SOC: pais de origem - territorial, mas tambem proxy de migracao",Nome do pais de nascimento da pessoa,3,2023|2024|2025,str,99.97,99.96,55,True
+p.sig_uf_escola_memb,TER,mantida como feature,territorial direta (match: sig_uf_escola),,UF da escola da pessoa,3,2023|2024|2025,str,68.24,66.92,26,True
+p.sig_uf_munic_nasc_pessoa,TER,removida na ablacao territorial dela,territorial direta (match: munic_nasc),,UF de nascimento da pessoa,3,2023|2024|2025,str,0.04,0.04,27,True
+d.ind_risco_scl_inseg_alim,TGT,LEAKAGE (removida explicitamente pre-modelo),alvo/precursor IA (match: ^d\.ind_risco_scl_inseg_alim$),,,2,2024|2025,float64,78.65,77.61,2,False
+inseg_alim_bin,TGT,TARGET (variavel resposta),alvo/precursor IA (match: ^inseg_alim_bin$),,,3,2023|2024|2025,float64,100.0,77.61,2,False
